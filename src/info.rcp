@@ -1,0 +1,54 @@
+HEX "INFO" ID info_aliens
+	10	12	4	10	10	1	10	0		/* cone head	*/
+	12	11	2	10	20	1	10	0		/* floop		*/
+	14	14	6	20	12	1	10	0		/* big eye		*/
+	12	13	1	30	30	6	12	0		/* 3 eye		*/
+	14	16	3	35	15	8	11	0		/* big dude		*/
+	13	11	3	15	10	1	10	0		/* hexagon		*/	
+	10	12	2	30	28	6	12	0		/* squiddy		*/
+	14	13	6	50	24	12	13	0		/* cube			*/
+	10	12	5	25	12	1	10	0		/* diamond		*/
+	11	13	4	45	16	8	11	0		/* arm dude		*/
+	12	13	6	40	24	6	12	0		/* tail guy		*/
+	13	15	4	60	22	12	13	0		/* dumbell		*/
+	12	12	5	121	24	12	13	0		/* boss			*/
+
+HEX "INFO" ID info_bullets
+	1	8	0	0	1	64	10	0		/* wimpy blaster shot	*/
+	3	7	1	1	2	48	15	0		/* green zap			*/
+	7	7	3	3	1	20	0	0		/* --------------------	*/
+	7	7	3	4	1	20	0	0		/* various				*/
+	7	7	3	5	1	20	0	0		/*		power-ups		*/
+	7	7	3	6	1	20	0	0		/* --------------------	*/
+	5	5	1	7	3	48	20	0		/* green blob			*/
+	2	8	1	10	1	104	15	0		/* ion cannon zap		*/
+	2	8	1	11	2	92	25	0		/* big dude shot		*/
+	3	8	0	13	1	126	28	0		/* quantum ray shot		*/
+	3	6	2	14	1	88	24	0		/* war thing primary	*/
+	4	4	2	15	2	76	14	0		/* war thing secondary	*/
+	5	5	3	17	2	70	25	0		/* cube spinners		*/
+	5	5	2	19	3	114	40	0		/* plasma				*/
+	6	6	2	22	2	90	60	0		/* guided missile		*/
+	5	5	1	24	1	94	0	0		/* bomb					*/
+
+HEX "INFO" ID info_weapons
+	0 0		0	18	1	0	0 0			/* wimpy blaster		*/
+	0 100	7	15	1	1	0 0			/* ion cannon			*/
+	0 175	0	8	1	0	0 0			/* auto blaster			*/
+	1 19	7	15	2	1	0 0			/* dual ion cannon		*/
+	1 244	9	9	1	2	0 0			/* quantum ray			*/
+	2 188	10	10	2	3	0 0			/* war thing			*/
+	4 176	13	10	2	4	0 0			/* plasma accelerator	*/
+
+HEX "INFO" ID info_specials
+	0 0		10	25	0 0					/* random teleporter	*/
+	0 50	25	50	0 0					/* barrier repair unit	*/
+	0 125	10	20	0 0					/* teleporter			*/
+	0 200	10	30	0 0					/* shield repair unit	*/
+	0 250	100	10	0 0					/* guided missile		*/
+	1 44	80	25	0 0					/* repulsion field		*/
+	1 119	120	30	0 0					/* bombs				*/
+
+HEX "INFO" ID info_effects
+	10	11	0	26	4	0				/* small explosion		*/
+	16	15	129	0	7	0				/* green teleport thing */

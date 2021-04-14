@@ -1,0 +1,392 @@
+BITMAP ID bmp_title					"gfx/title.bmp"					COMPRESS
+
+
+#ifdef GRAY4
+BITMAPGRAY ID bmp_datebook			"gfx/keys/datebook.bmp"			COMPRESS
+BITMAPGRAY ID bmp_address			"gfx/keys/address.bmp"			COMPRESS
+BITMAPGRAY ID bmp_todolist			"gfx/keys/todolist.bmp"			COMPRESS
+BITMAPGRAY ID bmp_memopad			"gfx/keys/memopad.bmp"			COMPRESS
+BITMAPGRAY ID bmp_pageup			"gfx/keys/pageup.bmp"			COMPRESS
+BITMAPGRAY ID bmp_pagedown			"gfx/keys/pagedown.bmp"			COMPRESS
+BITMAPGRAY ID bmp_nav_left			"gfx/keys/nav-left.bmp"			COMPRESS
+BITMAPGRAY ID bmp_nav_right			"gfx/keys/nav-right.bmp"		COMPRESS
+BITMAPGRAY ID bmp_nav_up			"gfx/keys/nav-up.bmp"			COMPRESS
+BITMAPGRAY ID bmp_nav_down			"gfx/keys/nav-down.bmp"			COMPRESS
+BITMAPGRAY ID bmp_nav_select		"gfx/keys/nav-select.bmp"		COMPRESS
+
+BITMAPGRAY ID bmp_datebook_alt		"gfx/keys/datebook_alt.bmp"		COMPRESS
+BITMAPGRAY ID bmp_address_alt		"gfx/keys/address_alt.bmp"		COMPRESS
+BITMAPGRAY ID bmp_todolist_alt		"gfx/keys/todolist_alt.bmp"		COMPRESS
+BITMAPGRAY ID bmp_memopad_alt		"gfx/keys/memopad_alt.bmp"		COMPRESS
+BITMAPGRAY ID bmp_pageup_alt		"gfx/keys/pageup_alt.bmp"		COMPRESS
+BITMAPGRAY ID bmp_pagedown_alt		"gfx/keys/pagedown_alt.bmp"		COMPRESS
+BITMAPGRAY ID bmp_nav_left_alt		"gfx/keys/nav-left_alt.bmp"		COMPRESS
+BITMAPGRAY ID bmp_nav_right_alt		"gfx/keys/nav-right_alt.bmp"	COMPRESS
+BITMAPGRAY ID bmp_nav_up_alt		"gfx/keys/nav-up_alt.bmp"		COMPRESS
+BITMAPGRAY ID bmp_nav_down_alt		"gfx/keys/nav-down_alt.bmp"		COMPRESS
+BITMAPGRAY ID bmp_nav_select_alt	"gfx/keys/nav-select_alt.bmp"	COMPRESS
+
+#else
+#ifdef COLOR
+BITMAPCOLOR ID bmp_datebook			"gfx/keys/datebook.bmp"			TRANSPARENTINDEX 0	COMPRESS
+BITMAPCOLOR ID bmp_address			"gfx/keys/address.bmp"			TRANSPARENTINDEX 0	COMPRESS
+BITMAPCOLOR ID bmp_todolist			"gfx/keys/todolist.bmp"			TRANSPARENTINDEX 0	COMPRESS
+BITMAPCOLOR ID bmp_memopad			"gfx/keys/memopad.bmp"			TRANSPARENTINDEX 0	COMPRESS
+BITMAPCOLOR ID bmp_pageup			"gfx/keys/pageup.bmp"			TRANSPARENTINDEX 0	COMPRESS
+BITMAPCOLOR ID bmp_pagedown			"gfx/keys/pagedown.bmp"			TRANSPARENTINDEX 0	COMPRESS
+BITMAPCOLOR ID bmp_nav_left			"gfx/keys/nav-left.bmp"			TRANSPARENTINDEX 0	COMPRESS
+BITMAPCOLOR ID bmp_nav_right		"gfx/keys/nav-right.bmp"		TRANSPARENTINDEX 0	COMPRESS
+BITMAPCOLOR ID bmp_nav_up			"gfx/keys/nav-up.bmp"			TRANSPARENTINDEX 0	COMPRESS
+BITMAPCOLOR ID bmp_nav_down			"gfx/keys/nav-down.bmp"			TRANSPARENTINDEX 0	COMPRESS
+BITMAPCOLOR ID bmp_nav_select		"gfx/keys/nav-select.bmp"		TRANSPARENTINDEX 0	COMPRESS
+
+BITMAPCOLOR ID bmp_datebook_alt		"gfx/keys/datebook_alt.bmp"		TRANSPARENTINDEX 0	COMPRESS
+BITMAPCOLOR ID bmp_address_alt		"gfx/keys/address_alt.bmp"		TRANSPARENTINDEX 0	COMPRESS
+BITMAPCOLOR ID bmp_todolist_alt		"gfx/keys/todolist_alt.bmp"		TRANSPARENTINDEX 0	COMPRESS
+BITMAPCOLOR ID bmp_memopad_alt		"gfx/keys/memopad_alt.bmp"		TRANSPARENTINDEX 0	COMPRESS
+BITMAPCOLOR ID bmp_pageup_alt		"gfx/keys/pageup_alt.bmp"		TRANSPARENTINDEX 0	COMPRESS
+BITMAPCOLOR ID bmp_pagedown_alt		"gfx/keys/pagedown_alt.bmp"		TRANSPARENTINDEX 0	COMPRESS
+BITMAPCOLOR ID bmp_nav_left_alt		"gfx/keys/nav-left_alt.bmp"		TRANSPARENTINDEX 0	COMPRESS
+BITMAPCOLOR ID bmp_nav_right_alt	"gfx/keys/nav-right_alt.bmp"	TRANSPARENTINDEX 0	COMPRESS
+BITMAPCOLOR ID bmp_nav_up_alt		"gfx/keys/nav-up_alt.bmp"		TRANSPARENTINDEX 0	COMPRESS
+BITMAPCOLOR ID bmp_nav_down_alt		"gfx/keys/nav-down_alt.bmp"		TRANSPARENTINDEX 0	COMPRESS
+BITMAPCOLOR ID bmp_nav_select_alt	"gfx/keys/nav-select_alt.bmp"	TRANSPARENTINDEX 0	COMPRESS
+
+#else
+BITMAPGRAY16 ID bmp_datebook		"gfx/keys/datebook.bmp"			COMPRESS
+BITMAPGRAY16 ID bmp_address			"gfx/keys/address.bmp"			COMPRESS
+BITMAPGRAY16 ID bmp_todolist		"gfx/keys/todolist.bmp"			COMPRESS
+BITMAPGRAY16 ID bmp_memopad			"gfx/keys/memopad.bmp"			COMPRESS
+BITMAPGRAY16 ID bmp_pageup			"gfx/keys/pageup.bmp"			COMPRESS
+BITMAPGRAY16 ID bmp_pagedown		"gfx/keys/pagedown.bmp"			COMPRESS
+BITMAPGRAY16 ID bmp_nav_left		"gfx/keys/nav-left.bmp"			COMPRESS
+BITMAPGRAY16 ID bmp_nav_right		"gfx/keys/nav-right.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_nav_up			"gfx/keys/nav-up.bmp"			COMPRESS
+BITMAPGRAY16 ID bmp_nav_down		"gfx/keys/nav-down.bmp"			COMPRESS
+BITMAPGRAY16 ID bmp_nav_select		"gfx/keys/nav-select.bmp"		COMPRESS
+
+BITMAPGRAY16 ID bmp_datebook_alt	"gfx/keys/datebook_alt.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_address_alt		"gfx/keys/address_alt.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_todolist_alt	"gfx/keys/todolist_alt.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_memopad_alt		"gfx/keys/memopad_alt.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_pageup_alt		"gfx/keys/pageup_alt.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_pagedown_alt	"gfx/keys/pagedown_alt.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_nav_left_alt	"gfx/keys/nav-left_alt.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_nav_right_alt	"gfx/keys/nav-right_alt.bmp"	COMPRESS
+BITMAPGRAY16 ID bmp_nav_up_alt		"gfx/keys/nav-up_alt.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_nav_down_alt	"gfx/keys/nav-down_alt.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_nav_select_alt	"gfx/keys/nav-select_alt.bmp"	COMPRESS
+#endif
+#endif
+
+
+#ifdef COLOR
+BITMAPCOLOR ID bmp_alien_conehead0	"gfx/lores-color/conehead0.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_alien_conehead1	"gfx/lores-color/conehead1.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_alien_floop0		"gfx/lores-color/floop0.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_alien_floop1		"gfx/lores-color/floop1.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_alien_bigeye0	"gfx/lores-color/bigeye0.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_alien_bigeye1	"gfx/lores-color/bigeye1.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_alien_3eye0		"gfx/lores-color/threeeye0.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_alien_3eye1		"gfx/lores-color/threeeye1.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_alien_bigdude0	"gfx/lores-color/bigdude0.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_alien_bigdude1	"gfx/lores-color/bigdude1.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_alien_hex0		"gfx/lores-color/hex0.bmp"			COMPRESS
+BITMAPCOLOR ID bmp_alien_hex1		"gfx/lores-color/hex1.bmp"			COMPRESS
+BITMAPCOLOR ID bmp_alien_squiddy0	"gfx/lores-color/squiddy0.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_alien_squiddy1	"gfx/lores-color/squiddy1.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_alien_cube0		"gfx/lores-color/cube0.bmp"			COMPRESS
+BITMAPCOLOR ID bmp_alien_cube1		"gfx/lores-color/cube1.bmp"			COMPRESS
+BITMAPCOLOR ID bmp_alien_diamond0	"gfx/lores-color/diamond0.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_alien_diamond1	"gfx/lores-color/diamond1.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_alien_armdude0	"gfx/lores-color/armdude0.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_alien_armdude1	"gfx/lores-color/armdude1.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_alien_tailguy0	"gfx/lores-color/tailguy0.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_alien_tailguy1	"gfx/lores-color/tailguy1.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_alien_dumbell0	"gfx/lores-color/dumbell0.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_alien_dumbell1	"gfx/lores-color/dumbell1.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_alien_boss0		"gfx/lores-color/boss0.bmp"			COMPRESS
+BITMAPCOLOR ID bmp_alien_boss1		"gfx/lores-color/boss1.bmp"			COMPRESS
+BITMAPCOLOR ID bmp_effect_explode0	"gfx/lores-color/explosion0.bmp"	COMPRESS
+BITMAPCOLOR ID bmp_effect_explode1	"gfx/lores-color/explosion1.bmp"	COMPRESS
+BITMAPCOLOR ID bmp_effect_explode2	"gfx/lores-color/explosion2.bmp"	COMPRESS
+BITMAPCOLOR ID bmp_effect_explode3	"gfx/lores-color/explosion3.bmp"	COMPRESS
+
+BITMAPCOLOR ID bmp_playerform0		"gfx/lores-color/playerform0.bmp"	COMPRESS
+BITMAPCOLOR ID bmp_playerform1		"gfx/lores-color/playerform1.bmp"	COMPRESS
+BITMAPCOLOR ID bmp_playerform2		"gfx/lores-color/playerform2.bmp"	COMPRESS
+BITMAPCOLOR ID bmp_playerform3		"gfx/lores-color/playerform3.bmp"	COMPRESS
+BITMAPCOLOR ID bmp_playerform4		"gfx/lores-color/playerform4.bmp"	COMPRESS
+BITMAPCOLOR ID bmp_playerform5		"gfx/lores-color/playerform5.bmp"	COMPRESS
+BITMAPCOLOR ID bmp_playerform6		"gfx/lores-color/playerform6.bmp"	COMPRESS
+BITMAPCOLOR ID bmp_player			"gfx/lores-color/player0.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_playerfire		"gfx/lores-color/playerfire.bmp"	COMPRESS
+BITMAPCOLOR ID bmp_playercharge		"gfx/lores-color/playercharge.bmp"	COMPRESS
+BITMAPCOLOR ID bmp_playercf			"gfx/lores-color/playercf.bmp"		COMPRESS
+
+BITMAPCOLOR ID bmp_bullet_wimpy			"gfx/lores-color/wimpyfire.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_bullet_greenzap0		"gfx/lores-color/greenzap0.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_bullet_greenzap1		"gfx/lores-color/greenzap1.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_bonus_shield			"gfx/lores-color/bonus_shield.bmp"	COMPRESS
+BITMAPCOLOR ID bmp_bonus_money			"gfx/lores-color/bonus_money.bmp"	COMPRESS
+BITMAPCOLOR ID bmp_bonus_power			"gfx/lores-color/bonus_power.bmp"	COMPRESS
+BITMAPCOLOR ID bmp_bonus_money2			"gfx/lores-color/bonus_money2.bmp"	COMPRESS
+BITMAPCOLOR ID bmp_bullet_blob0			"gfx/lores-color/blob0.bmp"			COMPRESS
+BITMAPCOLOR ID bmp_bullet_blob1			"gfx/lores-color/blob1.bmp"			COMPRESS
+BITMAPCOLOR ID bmp_bullet_blob2			"gfx/lores-color/blob2.bmp"			COMPRESS
+BITMAPCOLOR ID bmp_bullet_zap			"gfx/lores-color/zap.bmp"			COMPRESS
+BITMAPCOLOR ID bmp_bullet_greenshot0	"gfx/lores-color/greenshot0.bmp"	COMPRESS
+BITMAPCOLOR ID bmp_bullet_greenshot1	"gfx/lores-color/greenshot1.bmp"	COMPRESS
+BITMAPCOLOR ID bmp_bullet_ray			"gfx/lores-color/ray.bmp"			COMPRESS
+BITMAPCOLOR ID bmp_bullet_pointy		"gfx/lores-color/pointy.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_bullet_star0			"gfx/lores-color/star0.bmp"			COMPRESS
+BITMAPCOLOR ID bmp_bullet_star1			"gfx/lores-color/star1.bmp"			COMPRESS
+BITMAPCOLOR ID bmp_bullet_spinner0		"gfx/lores-color/spinner0.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_bullet_spinner1		"gfx/lores-color/spinner1.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_bullet_plasma0		"gfx/lores-color/plasma0.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_bullet_plasma1		"gfx/lores-color/plasma1.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_bullet_plasma2		"gfx/lores-color/plasma2.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_bullet_seeker0		"gfx/lores-color/seeker0.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_bullet_seeker1		"gfx/lores-color/seeker1.bmp"		COMPRESS
+BITMAPCOLOR ID bmp_bullet_bomb			"gfx/lores-color/bomb.bmp"			COMPRESS
+
+BITMAPCOLOR ID bmp_block0			"gfx/lores-color/block0.bmp"	COMPRESS
+BITMAPCOLOR ID bmp_block1			"gfx/lores-color/block1.bmp"	COMPRESS
+BITMAPCOLOR ID bmp_block2			"gfx/lores-color/block2.bmp"	COMPRESS
+BITMAPCOLOR ID bmp_block3			"gfx/lores-color/block3.bmp"	COMPRESS
+
+BITMAPCOLOR ID bmp_infobar			"gfx/lores-color/infobar.bmp"	COMPRESS
+
+#else
+
+#ifdef GRAY4
+BITMAPGRAY ID bmp_alien_conehead0	"gfx/lores-gray4/conehead0.bmp"		COMPRESS
+BITMAPGRAY ID bmp_alien_conehead1	"gfx/lores-gray4/conehead1.bmp"		COMPRESS
+BITMAPGRAY ID bmp_alien_floop0		"gfx/lores-gray4/floop0.bmp"		COMPRESS
+BITMAPGRAY ID bmp_alien_floop1		"gfx/lores-gray4/floop1.bmp"		COMPRESS
+BITMAPGRAY ID bmp_alien_bigeye0		"gfx/lores-gray4/bigeye0.bmp"		COMPRESS
+BITMAPGRAY ID bmp_alien_bigeye1		"gfx/lores-gray4/bigeye1.bmp"		COMPRESS
+BITMAPGRAY ID bmp_alien_3eye0		"gfx/lores-gray4/threeeye0.bmp"		COMPRESS
+BITMAPGRAY ID bmp_alien_3eye1		"gfx/lores-gray4/threeeye1.bmp"		COMPRESS
+BITMAPGRAY ID bmp_alien_bigdude0	"gfx/lores-gray4/bigdude0.bmp"		COMPRESS
+BITMAPGRAY ID bmp_alien_bigdude1	"gfx/lores-gray4/bigdude1.bmp"		COMPRESS
+BITMAPGRAY ID bmp_alien_hex0		"gfx/lores-gray4/hex0.bmp"			COMPRESS
+BITMAPGRAY ID bmp_alien_hex1		"gfx/lores-gray4/hex1.bmp"			COMPRESS
+BITMAPGRAY ID bmp_alien_squiddy0	"gfx/lores-gray4/squiddy0.bmp"		COMPRESS
+BITMAPGRAY ID bmp_alien_squiddy1	"gfx/lores-gray4/squiddy1.bmp"		COMPRESS
+BITMAPGRAY ID bmp_alien_cube0		"gfx/lores-gray4/cube0.bmp"			COMPRESS
+BITMAPGRAY ID bmp_alien_cube1		"gfx/lores-gray4/cube1.bmp"			COMPRESS
+BITMAPGRAY ID bmp_alien_diamond0	"gfx/lores-gray4/diamond0.bmp"		COMPRESS
+BITMAPGRAY ID bmp_alien_diamond1	"gfx/lores-gray4/diamond1.bmp"		COMPRESS
+BITMAPGRAY ID bmp_alien_armdude0	"gfx/lores-gray4/armdude0.bmp"		COMPRESS
+BITMAPGRAY ID bmp_alien_armdude1	"gfx/lores-gray4/armdude1.bmp"		COMPRESS
+BITMAPGRAY ID bmp_alien_tailguy0	"gfx/lores-gray4/tailguy0.bmp"		COMPRESS
+BITMAPGRAY ID bmp_alien_tailguy1	"gfx/lores-gray4/tailguy1.bmp"		COMPRESS
+BITMAPGRAY ID bmp_alien_dumbell0	"gfx/lores-gray4/dumbell0.bmp"		COMPRESS
+BITMAPGRAY ID bmp_alien_dumbell1	"gfx/lores-gray4/dumbell1.bmp"		COMPRESS
+BITMAPGRAY ID bmp_alien_boss0		"gfx/lores-gray4/boss0.bmp"			COMPRESS
+BITMAPGRAY ID bmp_alien_boss1		"gfx/lores-gray4/boss1.bmp"			COMPRESS
+BITMAPGRAY ID bmp_effect_explode0	"gfx/lores-gray4/explosion0.bmp"	COMPRESS
+BITMAPGRAY ID bmp_effect_explode1	"gfx/lores-gray4/explosion1.bmp"	COMPRESS
+BITMAPGRAY ID bmp_effect_explode2	"gfx/lores-gray4/explosion2.bmp"	COMPRESS
+BITMAPGRAY ID bmp_effect_explode3	"gfx/lores-gray4/explosion3.bmp"	COMPRESS
+
+BITMAPGRAY ID bmp_playerform0		"gfx/lores-gray4/playerform0.bmp"	COMPRESS
+BITMAPGRAY ID bmp_playerform1		"gfx/lores-gray4/playerform1.bmp"	COMPRESS
+BITMAPGRAY ID bmp_playerform2		"gfx/lores-gray4/playerform2.bmp"	COMPRESS
+BITMAPGRAY ID bmp_playerform3		"gfx/lores-gray4/playerform3.bmp"	COMPRESS
+BITMAPGRAY ID bmp_playerform4		"gfx/lores-gray4/playerform4.bmp"	COMPRESS
+BITMAPGRAY ID bmp_playerform5		"gfx/lores-gray4/playerform5.bmp"	COMPRESS
+BITMAPGRAY ID bmp_playerform6		"gfx/lores-gray4/playerform6.bmp"	COMPRESS
+BITMAPGRAY ID bmp_player			"gfx/lores-gray4/player0.bmp"		COMPRESS
+BITMAPGRAY ID bmp_playerfire		"gfx/lores-gray4/playerfire.bmp"	COMPRESS
+BITMAPGRAY ID bmp_playercharge		"gfx/lores-gray4/playercharge.bmp"	COMPRESS
+BITMAPGRAY ID bmp_playercf			"gfx/lores-gray4/playercf.bmp"		COMPRESS
+
+BITMAPGRAY ID bmp_bullet_wimpy		"gfx/lores-gray4/wimpyfire.bmp"		COMPRESS
+BITMAPGRAY ID bmp_bullet_greenzap0	"gfx/lores-gray4/greenzap0.bmp"		COMPRESS
+BITMAPGRAY ID bmp_bullet_greenzap1	"gfx/lores-gray4/greenzap1.bmp"		COMPRESS
+BITMAPGRAY ID bmp_bonus_shield		"gfx/lores-gray4/bonus_shield.bmp"	COMPRESS
+BITMAPGRAY ID bmp_bonus_money		"gfx/lores-gray4/bonus_money.bmp"	COMPRESS
+BITMAPGRAY ID bmp_bonus_power		"gfx/lores-gray4/bonus_power.bmp"	COMPRESS
+BITMAPGRAY ID bmp_bonus_money2		"gfx/lores-gray4/bonus_money2.bmp"	COMPRESS
+BITMAPGRAY ID bmp_bullet_blob0		"gfx/lores-gray4/blob0.bmp"			COMPRESS
+BITMAPGRAY ID bmp_bullet_blob1		"gfx/lores-gray4/blob1.bmp"			COMPRESS
+BITMAPGRAY ID bmp_bullet_blob2		"gfx/lores-gray4/blob2.bmp"			COMPRESS
+BITMAPGRAY ID bmp_bullet_zap		"gfx/lores-gray4/zap.bmp"			COMPRESS
+BITMAPGRAY ID bmp_bullet_greenshot0	"gfx/lores-gray4/greenshot0.bmp"	COMPRESS
+BITMAPGRAY ID bmp_bullet_greenshot1	"gfx/lores-gray4/greenshot1.bmp"	COMPRESS
+BITMAPGRAY ID bmp_bullet_ray		"gfx/lores-gray4/ray.bmp"			COMPRESS
+BITMAPGRAY ID bmp_bullet_pointy		"gfx/lores-gray4/pointy.bmp"		COMPRESS
+BITMAPGRAY ID bmp_bullet_star0		"gfx/lores-gray4/star0.bmp"			COMPRESS
+BITMAPGRAY ID bmp_bullet_star1		"gfx/lores-gray4/star1.bmp"			COMPRESS
+BITMAPGRAY ID bmp_bullet_spinner0	"gfx/lores-gray4/spinner0.bmp"		COMPRESS
+BITMAPGRAY ID bmp_bullet_spinner1	"gfx/lores-gray4/spinner1.bmp"		COMPRESS
+BITMAPGRAY ID bmp_bullet_plasma0	"gfx/lores-gray4/plasma0.bmp"		COMPRESS
+BITMAPGRAY ID bmp_bullet_plasma1	"gfx/lores-gray4/plasma1.bmp"		COMPRESS
+BITMAPGRAY ID bmp_bullet_plasma2	"gfx/lores-gray4/plasma2.bmp"		COMPRESS
+BITMAPGRAY ID bmp_bullet_seeker0	"gfx/lores-gray4/seeker0.bmp"		COMPRESS
+BITMAPGRAY ID bmp_bullet_seeker1	"gfx/lores-gray4/seeker1.bmp"		COMPRESS
+BITMAPGRAY ID bmp_bullet_bomb		"gfx/lores-gray4/bomb.bmp"			COMPRESS
+
+BITMAPGRAY ID bmp_block0			"gfx/lores-gray4/block0.bmp"		COMPRESS
+BITMAPGRAY ID bmp_block1			"gfx/lores-gray4/block1.bmp"		COMPRESS
+BITMAPGRAY ID bmp_block2			"gfx/lores-gray4/block2.bmp"		COMPRESS
+BITMAPGRAY ID bmp_block3			"gfx/lores-gray4/block3.bmp"		COMPRESS
+
+BITMAPGRAY ID bmp_infobar			"gfx/lores-gray4/infobar.bmp"		COMPRESS
+
+#else
+BITMAPGRAY16 ID bmp_alien_conehead0		"gfx/lores-gray16/conehead0.bmp"	COMPRESS
+BITMAPGRAY16 ID bmp_alien_conehead1		"gfx/lores-gray16/conehead1.bmp"	COMPRESS
+BITMAPGRAY16 ID bmp_alien_floop0		"gfx/lores-gray16/floop0.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_alien_floop1		"gfx/lores-gray16/floop1.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_alien_bigeye0		"gfx/lores-gray16/bigeye0.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_alien_bigeye1		"gfx/lores-gray16/bigeye1.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_alien_3eye0			"gfx/lores-gray16/threeeye0.bmp"	COMPRESS
+BITMAPGRAY16 ID bmp_alien_3eye1			"gfx/lores-gray16/threeeye1.bmp"	COMPRESS
+BITMAPGRAY16 ID bmp_alien_bigdude0		"gfx/lores-gray16/bigdude0.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_alien_bigdude1		"gfx/lores-gray16/bigdude1.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_alien_hex0			"gfx/lores-gray16/hex0.bmp"			COMPRESS
+BITMAPGRAY16 ID bmp_alien_hex1			"gfx/lores-gray16/hex1.bmp"			COMPRESS
+BITMAPGRAY16 ID bmp_alien_squiddy0		"gfx/lores-gray16/squiddy0.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_alien_squiddy1		"gfx/lores-gray16/squiddy1.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_alien_cube0			"gfx/lores-gray16/cube0.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_alien_cube1			"gfx/lores-gray16/cube1.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_alien_diamond0		"gfx/lores-gray16/diamond0.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_alien_diamond1		"gfx/lores-gray16/diamond1.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_alien_armdude0		"gfx/lores-gray16/armdude0.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_alien_armdude1		"gfx/lores-gray16/armdude1.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_alien_tailguy0		"gfx/lores-gray16/tailguy0.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_alien_tailguy1		"gfx/lores-gray16/tailguy1.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_alien_dumbell0		"gfx/lores-gray16/dumbell0.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_alien_dumbell1		"gfx/lores-gray16/dumbell1.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_alien_boss0			"gfx/lores-gray16/boss0.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_alien_boss1			"gfx/lores-gray16/boss1.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_effect_explode0		"gfx/lores-gray16/explosion0.bmp"	COMPRESS
+BITMAPGRAY16 ID bmp_effect_explode1		"gfx/lores-gray16/explosion1.bmp"	COMPRESS
+BITMAPGRAY16 ID bmp_effect_explode2		"gfx/lores-gray16/explosion2.bmp"	COMPRESS
+BITMAPGRAY16 ID bmp_effect_explode3		"gfx/lores-gray16/explosion3.bmp"	COMPRESS
+
+BITMAPGRAY16 ID bmp_playerform0			"gfx/lores-gray16/playerform0.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_playerform1			"gfx/lores-gray16/playerform1.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_playerform2			"gfx/lores-gray16/playerform2.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_playerform3			"gfx/lores-gray16/playerform3.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_playerform4			"gfx/lores-gray16/playerform4.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_playerform5			"gfx/lores-gray16/playerform5.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_playerform6			"gfx/lores-gray16/playerform6.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_player				"gfx/lores-gray16/player0.bmp"			COMPRESS
+BITMAPGRAY16 ID bmp_playerfire			"gfx/lores-gray16/playerfire.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_playercharge		"gfx/lores-gray16/playercharge.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_playercf			"gfx/lores-gray16/playercf.bmp"			COMPRESS
+
+BITMAPGRAY16 ID bmp_bullet_wimpy		"gfx/lores-gray16/wimpyfire.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_bullet_greenzap0	"gfx/lores-gray16/greenzap0.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_bullet_greenzap1	"gfx/lores-gray16/greenzap1.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_bonus_shield		"gfx/lores-gray16/bonus_shield.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_bonus_money			"gfx/lores-gray16/bonus_money.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_bonus_power			"gfx/lores-gray16/bonus_power.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_bonus_money2		"gfx/lores-gray16/bonus_money2.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_bullet_blob0		"gfx/lores-gray16/blob0.bmp"			COMPRESS
+BITMAPGRAY16 ID bmp_bullet_blob1		"gfx/lores-gray16/blob1.bmp"			COMPRESS
+BITMAPGRAY16 ID bmp_bullet_blob2		"gfx/lores-gray16/blob2.bmp"			COMPRESS
+BITMAPGRAY16 ID bmp_bullet_zap			"gfx/lores-gray16/zap.bmp"				COMPRESS
+BITMAPGRAY16 ID bmp_bullet_greenshot0	"gfx/lores-gray16/greenshot0.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_bullet_greenshot1	"gfx/lores-gray16/greenshot1.bmp"		COMPRESS
+BITMAPGRAY16 ID bmp_bullet_ray			"gfx/lores-gray16/ray.bmp"				COMPRESS
+BITMAPGRAY16 ID bmp_bullet_pointy		"gfx/lores-gray16/pointy.bmp"			COMPRESS
+BITMAPGRAY16 ID bmp_bullet_star0		"gfx/lores-gray16/star0.bmp"			COMPRESS
+BITMAPGRAY16 ID bmp_bullet_star1		"gfx/lores-gray16/star1.bmp"			COMPRESS
+BITMAPGRAY16 ID bmp_bullet_spinner0		"gfx/lores-gray16/spinner0.bmp"			COMPRESS
+BITMAPGRAY16 ID bmp_bullet_spinner1		"gfx/lores-gray16/spinner1.bmp"			COMPRESS
+BITMAPGRAY16 ID bmp_bullet_plasma0		"gfx/lores-gray16/plasma0.bmp"			COMPRESS
+BITMAPGRAY16 ID bmp_bullet_plasma1		"gfx/lores-gray16/plasma1.bmp"			COMPRESS
+BITMAPGRAY16 ID bmp_bullet_plasma2		"gfx/lores-gray16/plasma2.bmp"			COMPRESS
+BITMAPGRAY16 ID bmp_bullet_seeker0		"gfx/lores-gray16/seeker0.bmp"			COMPRESS
+BITMAPGRAY16 ID bmp_bullet_seeker1		"gfx/lores-gray16/seeker1.bmp"			COMPRESS
+BITMAPGRAY16 ID bmp_bullet_bomb			"gfx/lores-gray16/bomb.bmp"				COMPRESS
+
+BITMAPGRAY16 ID bmp_block0		"gfx/lores-gray16/block0.bmp"			COMPRESS
+BITMAPGRAY16 ID bmp_block1		"gfx/lores-gray16/block1.bmp"			COMPRESS
+BITMAPGRAY16 ID bmp_block2		"gfx/lores-gray16/block2.bmp"			COMPRESS
+BITMAPGRAY16 ID bmp_block3		"gfx/lores-gray16/block3.bmp"			COMPRESS
+
+BITMAPGRAY16 ID bmp_infobar		"gfx/lores-gray16/infobar.bmp"			COMPRESS
+
+#endif
+
+BITMAP ID mask_alien_conehead0		"gfx/masks/conehead0.bmp"	COMPRESS
+BITMAP ID mask_alien_conehead1		"gfx/masks/conehead1.bmp"	COMPRESS
+BITMAP ID mask_alien_floop0			"gfx/masks/floop0.bmp"		COMPRESS
+BITMAP ID mask_alien_floop1			"gfx/masks/floop1.bmp"		COMPRESS
+BITMAP ID mask_alien_bigeye0		"gfx/masks/bigeye0.bmp"		COMPRESS
+BITMAP ID mask_alien_bigeye1		"gfx/masks/bigeye1.bmp"		COMPRESS
+BITMAP ID mask_alien_3eye0			"gfx/masks/threeeye0.bmp"	COMPRESS
+BITMAP ID mask_alien_3eye1			"gfx/masks/threeeye1.bmp"	COMPRESS
+BITMAP ID mask_alien_bigdude0		"gfx/masks/bigdude0.bmp"	COMPRESS
+BITMAP ID mask_alien_bigdude1		"gfx/masks/bigdude1.bmp"	COMPRESS
+BITMAP ID mask_alien_hex0			"gfx/masks/hex0.bmp"		COMPRESS
+BITMAP ID mask_alien_hex1			"gfx/masks/hex1.bmp"		COMPRESS
+BITMAP ID mask_alien_squiddy0		"gfx/masks/squiddy0.bmp"	COMPRESS
+BITMAP ID mask_alien_squiddy1		"gfx/masks/squiddy1.bmp"	COMPRESS
+BITMAP ID mask_alien_cube0			"gfx/masks/cube0.bmp"		COMPRESS
+BITMAP ID mask_alien_cube1			"gfx/masks/cube1.bmp"		COMPRESS
+BITMAP ID mask_alien_diamond0		"gfx/masks/diamond0.bmp"	COMPRESS
+BITMAP ID mask_alien_diamond1		"gfx/masks/diamond1.bmp"	COMPRESS
+BITMAP ID mask_alien_armdude0		"gfx/masks/armdude0.bmp"	COMPRESS
+BITMAP ID mask_alien_armdude1		"gfx/masks/armdude1.bmp"	COMPRESS
+BITMAP ID mask_alien_tailguy0		"gfx/masks/tailguy0.bmp"	COMPRESS
+BITMAP ID mask_alien_tailguy1		"gfx/masks/tailguy1.bmp"	COMPRESS
+BITMAP ID mask_alien_dumbell0		"gfx/masks/dumbell0.bmp"	COMPRESS
+BITMAP ID mask_alien_dumbell1		"gfx/masks/dumbell1.bmp"	COMPRESS
+BITMAP ID mask_alien_boss0			"gfx/masks/boss0.bmp"		COMPRESS
+BITMAP ID mask_alien_boss1			"gfx/masks/boss1.bmp"		COMPRESS
+BITMAP ID mask_effect_explode0		"gfx/masks/explosion0.bmp"	COMPRESS
+BITMAP ID mask_effect_explode1		"gfx/masks/explosion1.bmp"	COMPRESS
+BITMAP ID mask_effect_explode2		"gfx/masks/explosion2.bmp"	COMPRESS
+BITMAP ID mask_effect_explode3		"gfx/masks/explosion3.bmp"	COMPRESS
+
+BITMAP ID mask_playerform0		"gfx/masks/playerform0.bmp"		COMPRESS
+BITMAP ID mask_playerform1		"gfx/masks/playerform1.bmp"		COMPRESS
+BITMAP ID mask_playerform2		"gfx/masks/playerform2.bmp"		COMPRESS
+BITMAP ID mask_playerform3		"gfx/masks/playerform3.bmp"		COMPRESS
+BITMAP ID mask_playerform4		"gfx/masks/playerform4.bmp"		COMPRESS
+BITMAP ID mask_playerform5		"gfx/masks/playerform5.bmp"		COMPRESS
+BITMAP ID mask_playerform6		"gfx/masks/playerform6.bmp"		COMPRESS
+BITMAP ID mask_player			"gfx/masks/player0.bmp"			COMPRESS
+BITMAP ID mask_playerfire		"gfx/masks/playerfire.bmp"		COMPRESS
+BITMAP ID mask_playercharge		"gfx/masks/playercharge.bmp"	COMPRESS
+BITMAP ID mask_playercf			"gfx/masks/playercf.bmp"		COMPRESS
+
+BITMAP ID mask_bullet_wimpy			"gfx/masks/wimpyfire.bmp"		COMPRESS
+BITMAP ID mask_bullet_greenzap0		"gfx/masks/greenzap0.bmp"		COMPRESS
+BITMAP ID mask_bullet_greenzap1		"gfx/masks/greenzap1.bmp"		COMPRESS
+BITMAP ID mask_bonus_shield			"gfx/masks/bonus_shield.bmp"	COMPRESS
+BITMAP ID mask_bonus_money			"gfx/masks/bonus_money.bmp"		COMPRESS
+BITMAP ID mask_bonus_power			"gfx/masks/bonus_power.bmp"		COMPRESS
+BITMAP ID mask_bonus_money2			"gfx/masks/bonus_money.bmp"		COMPRESS
+BITMAP ID mask_bullet_blob0			"gfx/masks/blob0.bmp"			COMPRESS
+BITMAP ID mask_bullet_blob1			"gfx/masks/blob1.bmp"			COMPRESS
+BITMAP ID mask_bullet_blob2			"gfx/masks/blob2.bmp"			COMPRESS
+BITMAP ID mask_bullet_zap			"gfx/masks/zap.bmp"				COMPRESS
+BITMAP ID mask_bullet_greenshot0	"gfx/masks/greenshot0.bmp"		COMPRESS
+BITMAP ID mask_bullet_greenshot1	"gfx/masks/greenshot1.bmp"		COMPRESS
+BITMAP ID mask_bullet_ray			"gfx/masks/ray.bmp"				COMPRESS
+BITMAP ID mask_bullet_pointy		"gfx/masks/pointy.bmp"			COMPRESS
+BITMAP ID mask_bullet_star0			"gfx/masks/star0.bmp"			COMPRESS
+BITMAP ID mask_bullet_star1			"gfx/masks/star1.bmp"			COMPRESS
+BITMAP ID mask_bullet_spinner0		"gfx/masks/spinner0.bmp"		COMPRESS
+BITMAP ID mask_bullet_spinner1		"gfx/masks/spinner1.bmp"		COMPRESS
+BITMAP ID mask_bullet_plasma0		"gfx/masks/plasma0.bmp"			COMPRESS
+BITMAP ID mask_bullet_plasma1		"gfx/masks/plasma1.bmp"			COMPRESS
+BITMAP ID mask_bullet_plasma2		"gfx/masks/plasma2.bmp"			COMPRESS
+BITMAP ID mask_bullet_seeker0		"gfx/masks/seeker0.bmp"			COMPRESS
+BITMAP ID mask_bullet_seeker1		"gfx/masks/seeker1.bmp"			COMPRESS
+BITMAP ID mask_bullet_bomb			"gfx/masks/bomb.bmp"			COMPRESS
+
+BITMAP ID mask_block0			"gfx/masks/block0.bmp"		COMPRESS
+BITMAP ID mask_block1			"gfx/masks/block1.bmp"		COMPRESS
+BITMAP ID mask_block2			"gfx/masks/block2.bmp"		COMPRESS
+BITMAP ID mask_block3			"gfx/masks/block3.bmp"		COMPRESS
+
+#endif

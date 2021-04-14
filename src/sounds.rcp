@@ -1,0 +1,151 @@
+HEX "PSND" ID sound_firewimpy
+	0 2
+	3 100		0 25	255 255
+	3 050		0 60	0 0
+
+HEX "PSND" ID sound_firezap
+	0 4
+	3 0			0 40	0 0
+	2 120		0 40	0 0
+	3 20		0 45	0 0
+	2 140		0 50	0 0
+
+HEX "PSND" ID sound_fireray
+	0 2
+	3 250		0 20	255 255
+	4 50		0 65	0 0
+
+HEX "PSND" ID sound_firewar
+	0 3
+	2 100		0 20	255 255
+	2 160		0 20	255 255
+	2 70		0 60	0 0
+
+HEX "PSND" ID sound_fireplasma
+	0 3
+	3 0			0 40	0 0
+	2 156		0 40	0 0
+	2 56		0 50	0 0
+
+HEX "PSND" ID sound_bonus
+	2 2
+	4 0			0 65	0 0
+	5 0			0 130	0 0
+
+HEX "PSND" ID sound_land
+	3 5
+	1 150		0 220	0 0
+	1 150		0 30	255 250
+	1 100		0 220	0 0
+	1 100		0 30	255 250
+	1 20		2 70	0 0
+
+HEX "PSND" ID sound_boom
+	1 3
+	2 50		0 60	0 0
+	2 100		0 60	0 0
+	2 0			0 120	0 0
+
+HEX "PSND" ID sound_die
+	3 9
+	1 120		0 65	0 1
+	1 170		0 65	0 1
+	1 20		0 90	0 1
+	1 110		0 65	0 0
+	1 160		0 65	0 0
+	1 10		0 90	0 0
+	1 100		0 65	255 255
+	1 150		0 65	255 255
+	1 0			0 220	255 255
+
+HEX "PSND" ID sound_damage
+	1 3
+	1 100		0 70	0 0
+	1 150		0 70	0 0
+	1 0			0 140	0 0
+
+HEX "PSND" ID sound_alienfirezap
+	0 1
+	2 100		0 80	0 0
+
+HEX "PSND" ID sound_alienfireshot
+	0 1
+	2 10		0 120	0 0
+
+HEX "PSND" ID sound_alienfireblob
+	0 2
+	2 200		0 50	0 0
+	2 100		0 70	0 0
+
+HEX "PSND" ID sound_alienfirespin
+	0 2
+	2 110		0 50	0 0
+	2 20		0 110	0 0
+
+HEX "PSND" ID sound_winlevel
+	3 4
+	2 200		0 160	0 0
+	3 0			0 130	0 0
+	2 230		0 130	0 0
+	3 30		1 220	0 0
+
+HEX "PSND" ID sound_hitbarrier
+	0 2
+	1 100		0 100	0 0
+	1 0			0 150	0 0
+
+HEX "PSND" ID sound_fixbarrier
+	2 5
+	2 0			0 80	0 0
+	2 50		0 110	0 0
+	2 10		0 80	0 0
+	2 60		0 110	0 0
+	2 40		0 220	0 0
+
+HEX "PSND" ID sound_hitalien
+	0 1
+	2 0			0 120	0 0
+
+HEX "PSND" ID sound_teleport
+	2 9
+	3 32		0 60	0 0
+	3 0			0 60	0 0
+	2 224		0 60	0 0
+	2 192		0 60	0 0
+	2 192		0 60	255 250
+	2 192		0 60	0 0
+	2 224		0 60	0 0
+	3 0			0 60	0 0
+	3 32		0 60	0 0
+
+HEX "PSND" ID sound_reshield
+	2 5
+	2 200		0 100	0 0
+	2 200		0 50	255 250
+	2 220		0 100	0 0
+	2 220		0 50	255 250
+	2 240		0 150	0 0
+
+HEX "PSND" ID sound_repel
+	2 3
+	2 128		0 80	0 0
+	2 192		0 80	0 0
+	3 0			0 80	0 0
+
+HEX "PSND" ID sound_missile
+	2 3
+	2 128		0 90	0 0
+	2 192		0 140	0 0
+	2 176		0 140	255 254
+
+HEX "PSND" ID sound_wingame
+	4 9
+	2 128		0 220	0 0
+	2 32		0 90	0 0
+	2 96		0 150	0 0
+	2 160		1 80	0 0
+	2 96		0 220	0 0
+	2 0			0 90	0 0
+	2 64		0 150	0 0
+	2 128		0 180	0 0
+	2 192		1 200	0 0

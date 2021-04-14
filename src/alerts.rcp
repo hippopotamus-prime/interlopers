@@ -1,0 +1,130 @@
+ALERT ID alert_hscode
+	DEFAULTBUTTON 0
+	INFORMATION
+BEGIN
+	TITLE "High Score Code"
+	MESSAGE "High Score Code:\n"\
+		"^1"
+	BUTTONS "OK"
+END
+
+
+ALERT ID alert_hserror
+	DEFAULTBUTTON 0
+	ERROR
+BEGIN
+	TITLE "Code Generation Error"
+	MESSAGE "No code could be generated.  Please be sure you "\
+		"have a valid HotSync ID."
+	BUTTONS "OK"
+END
+
+
+ALERT ID alert_needreg
+	DEFAULTBUTTON 1
+	INFORMATION
+BEGIN
+	TITLE "Please Register"
+	MESSAGE "You need to register to continue.  Would you like to "\
+		"register now?"
+	BUTTONS "Yes" "No"
+END
+
+
+ALERT ID alert_goodcode
+	DEFAULTBUTTON 0
+	INFORMATION
+BEGIN
+	TITLE "Code Accepted"
+	MESSAGE "Your code was accepted.  Thank you for registering."
+	BUTTONS "OK"	
+END
+
+
+ALERT ID alert_badcode
+	DEFAULTBUTTON 0
+	ERROR
+BEGIN
+	TITLE "Invalid Code"
+	MESSAGE "The code you entered was not valid for your HotSync ID.  "\
+		"Please try again."
+	BUTTONS "OK"
+END
+
+
+ALERT ID alert_error
+	DEFAULTBUTTON 0
+	ERROR
+BEGIN
+	TITLE "Error!"
+	MESSAGE "Some error occurred.  Most likely "\
+		"you're out of memory."
+	BUTTONS "OK"
+END
+
+
+#ifdef COLOR
+ALERT ID alert_incompat
+	DEFAULTBUTTON 0
+	ERROR
+BEGIN
+	TITLE "Error!"
+	MESSAGE "Interlopers in general requires OS 3.5.  This version "\
+		"is designed for devices with 8-bit color displays."
+	BUTTONS "OK"
+END
+
+#else
+#ifdef GRAY4
+ALERT ID alert_incompat
+	DEFAULTBUTTON 0
+	ERROR
+BEGIN
+	TITLE "Error!"
+	MESSAGE "Interlopers in general requires OS 3.5.  This version "\
+		"is designed for devices with 2-bit grayscale displays."
+	BUTTONS "OK"
+END
+
+#else
+ALERT ID alert_incompat
+	DEFAULTBUTTON 0
+	ERROR
+BEGIN
+	TITLE "Error!"
+	MESSAGE "Interlopers in general requires OS 3.5.  This version "\
+		"is designed for devices with 4-bit grayscale displays."
+	BUTTONS "OK"
+END
+
+#endif
+#endif
+
+ALERT ID alert_rconf
+	DEFAULTBUTTON 1
+	CONFIRMATION
+BEGIN
+	TITLE "Confirm Retire"
+	MESSAGE "Really quit this game?"
+	BUTTONS "Yes" "No"
+END
+
+
+ALERT ID alert_clearhs
+	DEFAULTBUTTON 1
+	CONFIRMATION
+BEGIN
+	TITLE "Clear High Scores"
+	MESSAGE "Really clear the high scores?"
+	BUTTONS "Yes" "No"
+END
+
+
+ALERT ID alert_clearrecords
+	DEFAULTBUTTON 1
+	CONFIRMATION
+BEGIN
+	TITLE "Reset Records"
+	MESSAGE "Really reset the records?  You'll have to start over at wave 1."
+	BUTTONS "Yes" "No"
+END

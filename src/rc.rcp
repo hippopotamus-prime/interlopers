@@ -1,0 +1,837 @@
+#include "rc.h"
+
+VERSION "1.2"
+
+#ifdef COLOR
+ICON
+BEGIN
+	BITMAP "gfx/icon.bmp" BPP 1
+	BITMAP "gfx/icon_color.bmp" BPP 8 TRANSPARENTINDEX 4
+	BITMAP "gfx/icon_hr.bmp" BPP 16 TRANSPARENT 255 51 255 DENSITY 144
+END
+
+SMALLICON
+BEGIN
+	BITMAP "gfx/smallicon.bmp" BPP 1
+	BITMAP "gfx/smallicon_color.bmp" BPP 8 TRANSPARENTINDEX 4
+END
+
+#else
+ICON "gfx/icon.bmp"
+SMALLICON "gfx/smallicon.bmp"
+#endif
+
+
+
+#ifdef COLOR
+BITMAPCOLOR ID bmp_formicon "gfx/icon_color.bmp" TRANSPARENTINDEX 4 COMPRESS
+
+FORM ID form_about AT (2 42 156 116)
+	FRAME
+	USABLE
+	SAVEBEHIND
+	MODAL
+	DEFAULTBTNID DONE
+BEGIN
+	TITLE "About Interlopers"
+	FORMBITMAP AT (6 16) BITMAP bmp_formicon
+	LABEL "Interlopers" AUTOID AT (32 16) FONT 1
+	LABEL "version 1.2" AUTOID AT (PREVLEFT PREVTOP+11)
+	LABEL "Send comments to Aaron Curtis" AUTOID AT (6 PREVTOP+14)
+	LABEL "aaron@mobilegamelab.com" AUTOID AT (PREVLEFT PREVTOP+11)
+	LABEL "For more info, visit" AUTOID AT (PREVLEFT PREVTOP+13)
+	LABEL "www.mobilegamelab.com" AUTOID AT (PREVLEFT PREVTOP+11)
+	BUTTON "Done" ID DONE AT (PREVLEFT PREVTOP+16 42 18)
+		USABLE
+		FRAME
+END
+
+#else
+FORM ID form_about AT (2 42 156 116)
+	FRAME
+	USABLE
+	SAVEBEHIND
+	MODAL
+	DEFAULTBTNID DONE
+BEGIN
+	TITLE "About Interlopers"
+	FORMBITMAP AT (6 20) BITMAP bmp_alien_3eye0
+	LABEL "Interlopers" AUTOID AT (32 16) FONT 1
+	LABEL "version 1.2" AUTOID AT (PREVLEFT PREVTOP+11)
+	LABEL "Send comments to Aaron Curtis" AUTOID AT (6 PREVTOP+14)
+	LABEL "aaron@mobilegamelab.com" AUTOID AT (PREVLEFT PREVTOP+11)
+	LABEL "For more info, visit" AUTOID AT (PREVLEFT PREVTOP+13)
+	LABEL "www.mobilegamelab.com" AUTOID AT (PREVLEFT PREVTOP+11)
+	BUTTON "Done" ID DONE AT (PREVLEFT PREVTOP+16 42 18)
+		USABLE
+		FRAME
+END
+#endif
+
+
+
+FORM ID form_records AT (2 41 156 117)
+	FRAME
+	USABLE
+	NOSAVEBEHIND
+	MODAL
+	HELPID string_gaset
+	DEFAULTBTNID DONE
+BEGIN
+	TITLE "Game Settings"
+
+	LIST "Easy" "Normal" "Hard" "Nightmare"
+		ID list_diffs AT (78 16 AUTO AUTO) VISIBLEITEMS 4 NONUSABLE
+	LABEL "Difficulty" AUTOID AT (8 PREVTOP)
+	POPUPTRIGGER "" ID popup_diffs AT (65 PREVTOP AUTO AUTO)
+		LEFTANCHOR
+	POPUPLIST ID popup_diffs list_diffs
+
+	LABEL "Highest Wave Reached:" AUTOID AT (8 topwavey)
+	LABEL "00000" label_topwave AT (topwavex topwavey) NONUSABLE
+
+	LABEL "Start Wave:" AUTOID AT (8 startwavey)
+	BUTTON "+" ID button_waveplus AT (68 startwavey 10 10)
+	BUTTON "-" ID button_waveminus AT (PREVLEFT+46 startwavey 10 10)
+	LABEL "00001" ID label_startwave AT (startwavex startwavey)
+		NONUSABLE
+
+	LABEL "Weapon:" AUTOID AT (8 PREVTOP+14)
+	LABEL "Blaster"				ID label_startweapons+0 AT (68 PREVTOP) NONUSABLE
+	LABEL "Ion Cannon"			ID label_startweapons+1 AT (PREVLEFT PREVTOP) NONUSABLE
+	LABEL "Auto Blaster"		ID label_startweapons+2 AT (PREVLEFT PREVTOP) NONUSABLE
+	LABEL "Dual Ion Cannon"		ID label_startweapons+3 AT (PREVLEFT PREVTOP) NONUSABLE
+	LABEL "Quantum Ray"			ID label_startweapons+4 AT (PREVLEFT PREVTOP) NONUSABLE
+	LABEL "Assault Cannon"		ID label_startweapons+5 AT (PREVLEFT PREVTOP) NONUSABLE
+	LABEL "Plasma Accelerator"	ID label_startweapons+6 AT (PREVLEFT PREVTOP) NONUSABLE
+
+	LABEL "Equipment:" AUTOID AT (8 PREVTOP+12)
+	LABEL "Random Teleporter"	ID label_startequip+0 AT (68 PREVTOP) NONUSABLE
+	LABEL "Barrier Repair Unit"	ID label_startequip+1 AT (PREVLEFT PREVTOP) NONUSABLE
+	LABEL "Cross-Teleporter"	ID label_startequip+2 AT (PREVLEFT PREVTOP) NONUSABLE
+	LABEL "Sheild Repair Unit"	ID label_startequip+3 AT (PREVLEFT PREVTOP) NONUSABLE
+	LABEL "Guided Missile"		ID label_startequip+4 AT (PREVLEFT PREVTOP) NONUSABLE
+	LABEL "Repulsion Field"		ID label_startequip+5 AT (PREVLEFT PREVTOP) NONUSABLE
+	LABEL "Photon Burst"		ID label_startequip+6 AT (PREVLEFT PREVTOP) NONUSABLE
+
+	BUTTON "OK" ID OK AT (6 PREVBOTTOM+6 42 18)
+	BUTTON "Cancel" ID CANCEL AT (PREVRIGHT+9 PREVTOP 42 18)
+	BUTTON "Reset" ID button_rclear AT (PREVRIGHT+9 PREVTOP 42 18)
+END
+
+NAVIGATION ID form_records
+	INITIALSTATE 1
+	INITIALOBJECTID OK
+	JUMPOBJECTID OK
+	BOTTOMLEFTOBJECTID button_rclear
+NAVIGATIONMAP
+	ROW	popup_diffs
+	ROW button_waveplus
+		button_waveminus
+	ROW OK
+		CANCEL
+		button_rclear
+END
+
+
+
+FORM ID form_shop AT (2 2 156 156)
+	FRAME
+	USABLE
+	NOSAVEBEHIND
+	MODAL
+	DEFAULTBTNID DONE
+BEGIN
+	TITLE "Guns - Ammo - Gifts"
+
+	LABEL "$0000000" ID label_money AT (7 16) FONT 1
+	LABEL "Trade:" AUTOID AT (82 16)
+	LABEL "$0000" ID label_trade AT (113 16) FONT 1
+
+	LIST "Weapons" "Equipment"
+		ID list_shopview AT (46 28 AUTO AUTO) VISIBLEITEMS 2 NONUSABLE
+	LABEL "View" AUTOID AT (7 28)
+	POPUPTRIGGER "" ID popup_shopview AT (32 28 AUTO AUTO)
+		LEFTANCHOR
+	POPUPLIST ID popup_shopview list_shopview
+
+	LIST "Blaster" "Ion Cannon" "Auto Blaster" "Dual Ion Cannon"
+		"Quantum Ray" "Assault Cannon" "Plasma Accelerator"
+		ID list_weapons AT (8 44 AUTO AUTO) VISIBLEITEMS 7
+	LIST "IN USE" ID list_weaponprices AT (116 44 AUTO AUTO)
+		VISIBLEITEMS 7 NONUSABLE
+
+	LIST "Random Teleporter" "Barrier Repair Unit" "Cross-Teleporter"
+		"Shield Repair Unit" "Guided Missile" "Repulsion Field" "Photon Burst" 
+		ID list_equip AT (8 44 AUTO AUTO) VISIBLEITEMS 7 NONUSABLE
+	LIST "IN USE" ID list_equipprices AT (116 44 AUTO AUTO)
+		VISIBLEITEMS 7 NONUSABLE
+
+	BUTTON "More" ID button_more AT (6 132 42 18)
+		USABLE
+		FRAME
+	BUTTON "Exit" ID DONE AT (PREVRIGHT+9 132 42 18)
+		USABLE
+		FRAME
+	BUTTON "Buy" ID button_buy AT (PREVRIGHT+9 132 42 18)
+		NONUSABLE
+		FRAME
+END
+
+NAVIGATION ID form_shop
+	INITIALSTATE 1
+	INITIALOBJECTID DONE
+	JUMPOBJECTID DONE
+	BOTTOMLEFTOBJECTID button_buy
+NAVIGATIONMAP
+	ROW	popup_shopview
+	ROW list_weapons
+		list_equip
+		list_weaponprices SKIP
+		list_equipprices SKIP
+	ROW button_more
+		DONE
+		button_buy
+END
+
+
+FORM ID form_main AT (0 0 160 160)
+	NOFRAME
+	USABLE
+	NOSAVEBEHIND
+	MENUID menu_main
+BEGIN
+END
+
+FORM ID form_title AT (0 0 160 160)
+	NOFRAME
+	USABLE
+	NOSAVEBEHIND
+	MENUID menu_title
+BEGIN
+	BUTTON "Start!" ID button_titlestart AT (CENTER 54 60 18)
+		USABLE
+		FRAME
+	
+	BUTTON "High Scores" ID button_titlescores AT (CENTER PREVBOTTOM+6 60 18)
+
+	LABEL "- Settings -" AUTOID AT (CENTER PREVBOTTOM+6)
+	BUTTON "Game" ID button_titlerecords AT (12 PREVBOTTOM+4 38 18)
+	BUTTON "Program" ID button_titlesettings AT (PREVRIGHT+6 PREVTOP 48 18)
+	BUTTON "Keys" ID button_titlekeys AT (PREVRIGHT+6 PREVTOP 38 18)
+	
+/*
+	BUTTON "Settings" ID button_titlesettings AT (CENTER PREVBOTTOM+4 60 18)
+		USABLE
+		FRAME
+	BUTTON "Keys" ID button_titlekeys AT (CENTER PREVBOTTOM+4 60 18)
+		USABLE
+		FRAME
+	BUTTON "High Scores" ID button_titlescores AT (CENTER PREVBOTTOM+4 60 18)
+		USABLE
+		FRAME
+*/
+
+	LABEL "unregistered" ID label_regcheck AT (CENTER REGCHECKY)
+		FONT 1
+		NONUSABLE
+END
+
+NAVIGATION ID form_title
+	INITIALSTATE 1
+	INITIALOBJECTID button_titlestart
+	JUMPOBJECTID button_titlestart
+	BOTTOMLEFTOBJECTID button_titlescores
+NAVIGATIONMAP
+	ROW	button_titlestart
+	ROW button_titlesettings
+	ROW button_titlekeys
+	ROW button_titlescores
+END
+
+
+FORM ID form_highscores AT (2 2 156 156)
+	FRAME
+	USABLE
+	SAVEBEHIND
+	MODAL
+	HELPID string_hs
+	DEFAULTBTNID DONE
+BEGIN
+	TITLE "The Top Ten"
+
+	SCROLLBAR ID scrollbar_hs AT (147 30 7 HSPAGESIZE+4)
+		USABLE
+		MIN 0
+		MAX HSWINHEIGHT-HSPAGESIZE
+		PAGESIZE HSPAGESIZE
+		VALUE 0
+
+	LIST "Easy" "Normal" "Hard" "Nightmare"
+		ID list_hsdiffs AT (80 16 AUTO AUTO) VISIBLEITEMS 4 NONUSABLE
+	LABEL "Difficulty" AUTOID AT (8 16)
+	POPUPTRIGGER "" ID popup_hsdiffs AT (66 16 AUTO AUTO)
+		LEFTANCHOR
+	POPUPLIST ID popup_hsdiffs list_hsdiffs
+
+	BUTTON "Done" ID DONE AT (6 132 42 18)
+		USABLE
+		FRAME
+	BUTTON "Clear" ID button_hsclear AT (PREVRIGHT+9 132 42 18)
+		USABLE
+		FRAME
+	BUTTON "Code" ID button_hscode AT (PREVRIGHT+9 132 42 18)
+		USABLE
+		FRAME
+END
+
+NAVIGATION ID form_highscores
+	INITIALSTATE 2
+	INITIALOBJECTID DONE
+	JUMPOBJECTID DONE
+	BOTTOMLEFTOBJECTID button_hsclear
+NAVIGATIONMAP
+	ROW	popup_hsdiffs
+	ROW scrollbar_hs
+	ROW DONE
+		button_hsclear
+		button_hscode
+END
+
+
+FORM ID form_keys AT (2 2 156 156)
+	FRAME
+	USABLE
+	SAVEBEHIND
+	MODAL
+	HELPID string_keys
+	DEFAULTBTNID CANCEL
+BEGIN
+	TITLE "Key Settings"
+
+	BUTTON "" ID button_datebook AT (6 28 20 20)
+		USABLE NOFRAME
+		GRAPHICAL BITMAPID bmp_datebook SELECTEDBITMAPID bmp_datebook_alt
+
+	BUTTON "" ID button_address AT (34 32 20 20)
+		USABLE NOFRAME
+		GRAPHICAL BITMAPID bmp_address SELECTEDBITMAPID bmp_address_alt
+
+	BUTTON "" ID button_memopad AT (130 28 20 20)
+		USABLE NOFRAME
+		GRAPHICAL BITMAPID bmp_memopad SELECTEDBITMAPID bmp_memopad_alt
+
+	BUTTON "" ID button_todolist AT (102 32 20 20)
+		USABLE NOFRAME
+		GRAPHICAL BITMAPID bmp_todolist SELECTEDBITMAPID bmp_todolist_alt
+
+	BUTTON "" ID button_pageup AT (68 19 20 20)
+		USABLE NOFRAME
+		GRAPHICAL BITMAPID bmp_pageup SELECTEDBITMAPID bmp_pageup_alt
+
+	BUTTON "" ID button_pagedown AT (68 47 20 20)
+		USABLE NOFRAME
+		GRAPHICAL BITMAPID bmp_pagedown SELECTEDBITMAPID bmp_pagedown_alt
+
+	BUTTON "" ID button_nav_left AT (57 23 12 38)
+		USABLE NOFRAME NONUSABLE
+		GRAPHICAL BITMAPID bmp_nav_left SELECTEDBITMAPID bmp_nav_left_alt
+
+	BUTTON "" ID button_nav_up AT (69 21 18 12)
+		USABLE NOFRAME NONUSABLE
+		GRAPHICAL BITMAPID bmp_nav_up SELECTEDBITMAPID bmp_nav_up_alt
+
+	BUTTON "" ID button_nav_select AT (69 33 18 18)
+		USABLE NOFRAME NONUSABLE
+		GRAPHICAL BITMAPID bmp_nav_select SELECTEDBITMAPID bmp_nav_select_alt
+
+	BUTTON "" ID button_nav_down AT (69 51 18 12)
+		USABLE NOFRAME NONUSABLE
+		GRAPHICAL BITMAPID bmp_nav_down SELECTEDBITMAPID bmp_nav_down_alt
+
+	BUTTON "" ID button_nav_right AT (87 23 12 38)
+		USABLE NOFRAME NONUSABLE
+		GRAPHICAL BITMAPID bmp_nav_right SELECTEDBITMAPID bmp_nav_right_alt
+
+	LABEL "Select A Key:" AUTOID AT (8 74)
+	LABEL "Date Book"	ID label_datebook	AT (68 PREVTOP) NONUSABLE FONT 0
+	LABEL "Address"		ID label_address	AT (PREVLEFT PREVTOP) NONUSABLE FONT 0
+	LABEL "To Do List"	ID label_todolist	AT (PREVLEFT PREVTOP) NONUSABLE FONT 0
+	LABEL "Memo Pad"	ID label_memopad	AT (PREVLEFT PREVTOP) NONUSABLE FONT 0
+	LABEL "Up"			ID label_pageup		AT (PREVLEFT PREVTOP) NONUSABLE FONT 0
+	LABEL "Down"		ID label_pagedown	AT (PREVLEFT PREVTOP) NONUSABLE FONT 0
+	LABEL "Left"		ID label_left		AT (PREVLEFT PREVTOP) NONUSABLE FONT 0
+	LABEL "Right"		ID label_right		AT (PREVLEFT PREVTOP) NONUSABLE FONT 0
+	LABEL "Select"		ID label_select		AT (PREVLEFT PREVTOP) NONUSABLE FONT 0
+
+
+	LIST "- None -" "Left" "Right" "Fire" "Special" "Pause"
+		ID list_keys AT (66 PREVTOP+12 AUTO AUTO) VISIBLEITEMS 6 NONUSABLE
+	LABEL "Function:" AUTOID AT (8 PREVTOP)
+	POPUPTRIGGER "" ID popup_keys AT (53 PREVTOP AUTO AUTO)
+		LEFTANCHOR
+	POPUPLIST ID popup_keys list_keys	
+
+	CHECKBOX "Allow Key Events" ID checkbox_kevents at (6 112 AUTO AUTO)
+
+	BUTTON "OK" ID OK AT (6 132 42 18)
+		USABLE
+		FRAME
+	BUTTON "Cancel" ID CANCEL AT (PREVRIGHT+9 132 42 18)
+		USABLE
+		FRAME
+	BUTTON "Defaults" ID DEFAULTS AT (PREVRIGHT+9 132 42 18)
+		USABLE
+		FRAME
+END
+
+NAVIGATION ID form_keys
+	INITIALSTATE 1
+	INITIALOBJECTID OK
+	JUMPOBJECTID OK
+	BOTTOMLEFTOBJECTID DEFAULTS
+NAVIGATIONMAP
+	ROW button_pageup
+		button_nav_up
+	ROW	button_datebook
+		button_address
+		button_nav_left
+		button_nav_select
+		button_nav_right
+		button_todolist
+		button_memopad
+	ROW button_pagedown
+		button_nav_down
+	ROW checkbox_left
+		checkbox_special
+	ROW checkbox_right
+		checkbox_pause
+	ROW checkbox_fire
+		checkbox_none	
+	ROW OK
+		CANCEL
+		DEFAULTS
+END
+
+
+FORM ID form_pause AT (30 47 100 66)
+	FRAME
+	USABLE
+	SAVEBEHIND
+	MODAL
+	DEFAULTBTNID button_pauseresume
+	MENUID menu_pause
+BEGIN
+	LABEL "Game Paused" AUTOID AT (CENTER 6) FONT 2
+	LABEL "Wave 000" ID label_pausewave AT (CENTER PREVBOTTOM) NONUSABLE
+	BUTTON "Resume" ID button_pauseresume AT (CENTER PREVBOTTOM+4 50 20)
+		USABLE FRAME
+END
+
+
+FORM ID form_wingame AT (20 28 120 120)
+	FRAME
+	USABLE
+	SAVEBEHIND
+	MODAL
+	DEFAULTBTNID button_retire
+BEGIN
+	TITLE "Game Over"
+	LABEL "Congratulations!  You"  AUTOID AT (CENTER 15)
+	LABEL "survived the final wave!" AUTOID AT (CENTER PREVTOP+11)
+	LABEL "Maybe next time, those" AUTOID AT (CENTER PREVTOP+14)
+	LABEL "aliens will think twice" AUTOID AT (CENTER PREVTOP+11)
+	LABEL "about defending their" AUTOID AT (CENTER PREVTOP+11)
+	LABEL "planet, eh?" AUTOID AT (CENTER PREVTOP+11)
+	BUTTON "Continue" ID DONE AT (CENTER PREVBOTTOM+7 48 18)
+END
+
+
+FORM ID form_wingamehs AT (20 32 120 112)
+	FRAME
+	USABLE
+	SAVEBEHIND
+	MODAL
+	DEFAULTBTNID button_retire
+BEGIN
+	TITLE "Congratulations!"
+	LABEL "You survived the final wave!" AUTOID AT (CENTER 15)
+	LABEL "And you have a" AUTOID AT (CENTER PREVTOP+13)
+	LABEL "high score too!" AUTOID AT (CENTER PREVTOP+11)
+	LABEL "Enter your name..." AUTOID AT (CENTER PREVTOP+13)
+	GRAFFITISTATEINDICATOR AT (PREVRIGHT+2 PREVTOP)
+	FIELD ID field_highscore AT (CENTER PREVTOP+13 96 14)
+		MAXCHARS 17
+		USABLE
+		LEFTALIGN
+		UNDERLINED
+		EDITABLE
+		SINGLELINE
+	BUTTON "Continue" ID DONE AT (CENTER PREVBOTTOM+7 48 18)
+END
+
+NAVIGATION ID form_wingamehs
+	INITIALSTATE 1
+	INITIALOBJECTID field_highscore
+	JUMPOBJECTID DONE
+	BOTTOMLEFTOBJECTID DONE
+NAVIGATIONMAP
+	ROW field_highscore
+	ROW DONE
+END
+
+
+FORM ID form_die AT (20 28 120 120)
+	FRAME
+	USABLE
+	SAVEBEHIND
+	MODAL
+	DEFAULTBTNID DONE
+BEGIN
+	TITLE "Game Over"
+	LABEL "Well, you're dead." AUTOID AT (CENTER 15)
+	LABEL "Was it just bad luck," AUTOID AT (CENTER PREVTOP+13)
+	LABEL "or total incompetence?" AUTOID AT (CENTER PREVTOP+11)
+	LABEL "In either case, you are" AUTOID AT (CENTER PREVTOP+13)
+	LABEL "going to be given" AUTOID AT (CENTER PREVTOP+11)
+	LABEL "another chance." AUTOID AT (CENTER PREVTOP+11)
+	BUTTON "Continue" ID DONE AT (CENTER PREVBOTTOM+7 48 18)
+END
+
+
+FORM ID form_diehs AT (20 32 120 112)
+	FRAME
+	USABLE
+	SAVEBEHIND
+	MODAL
+	DEFAULTBTNID DONE
+BEGIN
+	TITLE "High Score!"
+	LABEL "Well, you're dead." AUTOID AT (CENTER 15)
+	LABEL "But you did manage" AUTOID AT (CENTER PREVTOP+13)
+	LABEL "to get a high score." AUTOID AT (CENTER PREVTOP+11)
+	LABEL "Enter your name..." AUTOID AT (CENTER PREVTOP+13)
+	GRAFFITISTATEINDICATOR AT (PREVRIGHT+2 PREVTOP)
+	FIELD ID field_highscore AT (CENTER PREVTOP+13 96 14)
+		MAXCHARS 17
+		USABLE
+		LEFTALIGN
+		UNDERLINED
+		EDITABLE
+		SINGLELINE
+	BUTTON "Continue" ID DONE AT (CENTER PREVBOTTOM+7 48 18)
+END
+
+NAVIGATION ID form_diehs
+	INITIALSTATE 1
+	INITIALOBJECTID field_highscore
+	JUMPOBJECTID DONE
+	BOTTOMLEFTOBJECTID DONE
+NAVIGATIONMAP
+	ROW field_highscore
+	ROW DONE
+END
+
+
+FORM ID form_settings AT (2 38 156 120)
+	FRAME
+	USABLE
+	SAVEBEHIND
+	MODAL
+	HELPID string_prset
+	DEFAULTBTNID CANCEL
+BEGIN
+	TITLE "Program Settings"
+
+	LIST "System Setting" "Off" "Low" "Medium" "High"
+		ID list_volume AT (80 16 AUTO AUTO) VISIBLEITEMS 5 NONUSABLE
+	LABEL "Sound Volume" AUTOID AT (8 PREVTOP)
+	POPUPTRIGGER "" ID popup_volume AT (67 PREVTOP AUTO AUTO)
+		LEFTANCHOR
+	POPUPLIST ID popup_volume list_volume
+
+	LIST "Movement" "Fire" "Pause" "Off"
+		ID list_pen AT (80 PREVTOP+12 AUTO AUTO) VISIBLEITEMS 4 NONUSABLE
+	LABEL "Pen Control" AUTOID AT (8 PREVTOP)
+	POPUPTRIGGER "" ID popup_pen AT (67 PREVTOP AUTO AUTO)
+		LEFTANCHOR
+	POPUPLIST ID popup_pen list_pen
+
+	CHECKBOX "Confirm Retire" ID checkbox_rconf AT (6 PREVTOP+14 AUTO AUTO)
+	CHECKBOX "Quick Restarts" ID checkbox_qrest AT (6 PREVTOP+12 AUTO AUTO)
+	CHECKBOX "Graffiti Control" ID checkbox_graf AT (6 PREVTOP+12 AUTO AUTO) NONUSABLE
+	CHECKBOX "Compatibility Mode" ID checkbox_compat AT (6 PREVTOP+12 AUTO AUTO) NONUSABLE
+
+	BUTTON "OK" ID OK AT (6 PREVBOTTOM+6 42 18)
+	BUTTON "Cancel" ID CANCEL AT (PREVRIGHT+9 PREVTOP 42 18)
+	BUTTON "Defaults" ID DEFAULTS AT (PREVRIGHT+9 PREVTOP 42 18)
+END
+
+NAVIGATION ID form_settings
+	INITIALSTATE 1
+	INITIALOBJECTID OK
+	JUMPOBJECTID OK
+	BOTTOMLEFTOBJECTID DEFAULTS
+NAVIGATIONMAP
+	ROW	popup_volume
+	ROW popup_pen
+	ROW checkbox_rconf
+	ROW checkbox_qrest
+	ROW checkbox_graf
+	ROW checkbox_compat
+	ROW OK
+		CANCEL
+		DEFAULTS
+END
+
+
+FORM ID form_restoring AT (0 0 160 160)
+	NOFRAME
+	NOSAVEBEHIND
+BEGIN
+	LABEL "Restoring the previous game..." AUTOID AT (0 0)
+END
+
+
+FORM ID form_score AT (20 26 120 124)
+	FRAME
+	USABLE
+	SAVEBEHIND
+	MODAL
+	DEFAULTBTNID button_retire
+BEGIN
+	TITLE "Final Score"
+	LABEL "Waves x100" AUTOID AT (8 15)
+	LABEL "Credits" AUTOID AT (PREVLEFT PREVTOP+11)
+	LABEL "Weapon Value" AUTOID AT (PREVLEFT PREVTOP+11)
+	LABEL "Equipment Value" AUTOID AT (PREVLEFT PREVTOP+11)
+	LABEL "Penalties" AUTOID AT (PREVLEFT PREVTOP+11)
+	LABEL "Total" AUTOID AT (PREVLEFT PREVTOP+22)
+	LABEL "-------------------" AUTOID AT (CENTER PREVTOP-11)
+
+	LABEL "00000" ID label_wavesx100 AT (SCORELABELX-30 SCORELABELY) NONUSABLE
+	LABEL "00000" ID label_credits AT (PREVLEFT PREVTOP+11) NONUSABLE
+	LABEL "00000" ID label_weaponval AT (PREVLEFT PREVTOP+11) NONUSABLE
+	LABEL "00000" ID label_equipval AT (PREVLEFT PREVTOP+11) NONUSABLE
+	LABEL "00000" ID label_penalties AT (PREVLEFT PREVTOP+11) NONUSABLE
+	LABEL "00000" ID label_total AT (PREVLEFT PREVTOP+22) NONUSABLE
+
+	BUTTON "Try Again" ID button_retry AT (8 PREVBOTTOM+6 48 18)
+	BUTTON "Retire" ID button_retire AT (PREVRIGHT+8 PREVTOP 48 18)
+END
+
+NAVIGATION ID form_score
+	INITIALSTATE 1
+	INITIALOBJECTID button_retry
+	JUMPOBJECTID button_retry
+	BOTTOMLEFTOBJECTID button_retire
+NAVIGATIONMAP
+	ROW	button_retry
+		button_retire
+END
+
+
+#ifdef HANDANGO
+FORM ID form_register AT (2 2 156 156)
+	FRAME
+	USABLE
+	SAVEBEHIND
+	MODAL
+	DEFAULTBTNID CANCEL
+BEGIN
+	TITLE "Registration"
+	LABEL "Registration allows access" AUTOID AT (CENTER 15)
+	LABEL "to all 50 waves." AUTOID AT (CENTER PREVTOP+11)
+	LABEL "For details on registration, visit" AUTOID AT (CENTER PREVTOP+13)
+	LABEL "www.handango.com" AUTOID AT (CENTER PREVTOP+11)
+	LABEL "Your HotSync ID:" AUTOID AT (CENTER PREVTOP+13) FONT 1
+	LABEL "----------------------------------------" ID label_hotsyncid AT (CENTER HSIDY)
+		NONUSABLE
+	LABEL "Please enter your" AUTOID AT (CENTER PREVTOP+13) FONT 1
+	LABEL "Registration Code:" AUTOID AT (CENTER PREVTOP+11) FONT 1
+	FIELD ID field_regcode AT (CENTER PREVTOP+13 90 14)
+		MAXCHARS MAXREGCODELEN
+		USABLE
+		LEFTALIGN
+		UNDERLINED
+		EDITABLE
+		SINGLELINE
+	GRAFFITISTATEINDICATOR AT (PREVRIGHT+3 PREVTOP)
+	BUTTON "Register" ID OK AT (31 PREVBOTTOM+8 42 18)
+	BUTTON "Cancel" ID CANCEL AT (PREVRIGHT+10 PREVTOP 42 18)
+END
+
+#else
+#ifdef PALMGEAR
+FORM ID form_register AT (2 2 156 156)
+	FRAME
+	USABLE
+	SAVEBEHIND
+	MODAL
+	DEFAULTBTNID CANCEL
+BEGIN
+	TITLE "Registration"
+	LABEL "Registration allows access" AUTOID AT (CENTER 15)
+	LABEL "to all 50 waves." AUTOID AT (CENTER PREVTOP+11)
+	LABEL "For details on registration, visit" AUTOID AT (CENTER PREVTOP+13)
+	LABEL "www.palmgear.com" AUTOID AT (CENTER PREVTOP+11)
+	LABEL "Your HotSync ID:" AUTOID AT (CENTER PREVTOP+13) FONT 1
+	LABEL "----------------------------------------" ID label_hotsyncid AT (CENTER HSIDY)
+		NONUSABLE
+	LABEL "Please enter your" AUTOID AT (CENTER PREVTOP+13) FONT 1
+	LABEL "Registration Code:" AUTOID AT (CENTER PREVTOP+11) FONT 1
+	FIELD ID field_regcode AT (CENTER PREVTOP+13 90 14)
+		MAXCHARS MAXREGCODELEN
+		USABLE
+		LEFTALIGN
+		UNDERLINED
+		EDITABLE
+		SINGLELINE
+	GRAFFITISTATEINDICATOR AT (PREVRIGHT+3 PREVTOP)
+	BUTTON "Register" ID OK AT (31 PREVBOTTOM+8 42 18)
+	BUTTON "Cancel" ID CANCEL AT (PREVRIGHT+10 PREVTOP 42 18)
+END
+
+#else
+#ifdef PDASSI
+FORM ID form_register AT (2 2 156 156)
+	FRAME
+	USABLE
+	SAVEBEHIND
+	MODAL
+	DEFAULTBTNID CANCEL
+BEGIN
+	TITLE "Registration"
+	LABEL "Registration allows access" AUTOID AT (CENTER 15)
+	LABEL "to all 50 waves." AUTOID AT (CENTER PREVTOP+11)
+	LABEL "For details on registration, visit" AUTOID AT (CENTER PREVTOP+13)
+	LABEL "www.pdassi.de" AUTOID AT (CENTER PREVTOP+11)
+	LABEL "Your HotSync ID:" AUTOID AT (CENTER PREVTOP+13) FONT 1
+	LABEL "----------------------------------------" ID label_hotsyncid AT (CENTER HSIDY)
+		NONUSABLE
+	LABEL "Please enter your" AUTOID AT (CENTER PREVTOP+13) FONT 1
+	LABEL "Registration Code:" AUTOID AT (CENTER PREVTOP+11) FONT 1
+	FIELD ID field_regcode AT (CENTER PREVTOP+13 90 14)
+		MAXCHARS MAXREGCODELEN
+		USABLE
+		LEFTALIGN
+		UNDERLINED
+		EDITABLE
+		SINGLELINE
+	GRAFFITISTATEINDICATOR AT (PREVRIGHT+3 PREVTOP)
+	BUTTON "Register" ID OK AT (31 PREVBOTTOM+8 42 18)
+	BUTTON "Cancel" ID CANCEL AT (PREVRIGHT+10 PREVTOP 42 18)
+END
+
+#else
+FORM ID form_register AT (2 2 156 156)
+	FRAME
+	USABLE
+	SAVEBEHIND
+	MODAL
+	DEFAULTBTNID CANCEL
+BEGIN
+	TITLE "Registration"
+	LABEL "Registration allows access" AUTOID AT (CENTER 15)
+	LABEL "to all 50 waves." AUTOID AT (CENTER PREVTOP+11)
+	LABEL "For details on registration, visit" AUTOID AT (CENTER PREVTOP+13)
+	LABEL "www.mobilegamelab.com" AUTOID AT (CENTER PREVTOP+11)
+	LABEL "Your HotSync ID:" AUTOID AT (CENTER PREVTOP+13) FONT 1
+	LABEL "----------------------------------------" ID label_hotsyncid AT (CENTER HSIDY)
+		NONUSABLE
+	LABEL "Please enter your" AUTOID AT (CENTER PREVTOP+13) FONT 1
+	LABEL "Registration Code:" AUTOID AT (CENTER PREVTOP+11) FONT 1
+	FIELD ID field_regcode AT (CENTER PREVTOP+13 90 14)
+		MAXCHARS MAXREGCODELEN
+		USABLE
+		LEFTALIGN
+		UNDERLINED
+		EDITABLE
+		SINGLELINE
+	GRAFFITISTATEINDICATOR AT (PREVRIGHT+3 PREVTOP)
+	BUTTON "Register" ID OK AT (31 PREVBOTTOM+8 42 18)
+	BUTTON "Cancel" ID CANCEL AT (PREVRIGHT+10 PREVTOP 42 18)
+END
+#endif
+#endif
+#endif
+
+NAVIGATION ID form_register
+	INITIALSTATE 1
+	INITIALOBJECTID field_regcode
+	JUMPOBJECTID OK
+	BOTTOMLEFTOBJECTID CANCEL
+NAVIGATIONMAP
+	ROW	field_regcode
+	ROW OK
+		CANCEL
+END
+
+
+MENU ID menu_main
+BEGIN
+	PULLDOWN "Interlopers"
+	BEGIN
+		MENUITEM "Pause"			ID menuitem_pause		"P"
+		MENUITEM "Retire"			ID menuitem_retire		"R"
+		MENUITEM SEPARATOR
+		MENUITEM "Game Settings"	ID menuitem_records		"G"
+		MENUITEM "Program Settings"	ID menuitem_settings	"S"
+		MENUITEM "Keys"				ID menuitem_keys		"K"
+		MENUITEM "High Scores"		ID menuitem_scores		"H"
+		MENUITEM SEPARATOR
+		MENUITEM "About"			ID menuitem_about		"A"
+		MENUITEM "Register"			ID menuitem_register
+		MENUITEM SEPARATOR
+		MENUITEM "Quit Game"		ID menuitem_quit		"Q"
+	END
+END
+
+
+MENU ID menu_title
+BEGIN
+	PULLDOWN "Interlopers"
+	BEGIN
+		MENUITEM "Begin Game"		ID menuitem_start		"B"
+		MENUITEM SEPARATOR
+		MENUITEM "Game Settings"	ID menuitem_records		"G"
+		MENUITEM "Program Settings"	ID menuitem_settings	"S"
+		MENUITEM "Keys"				ID menuitem_keys		"K"
+		MENUITEM "High Scores"		ID menuitem_scores		"H"
+		MENUITEM SEPARATOR
+		MENUITEM "About"			ID menuitem_about		"A"
+		MENUITEM "Register"			ID menuitem_register
+		MENUITEM SEPARATOR
+		MENUITEM "Quit Game"		ID menuitem_quit		"Q"
+	END
+END
+
+
+MENU ID menu_pause
+BEGIN
+	PULLDOWN "Interlopers"
+	BEGIN
+		MENUITEM "Resume"		ID menuitem_resume		"P"
+		MENUITEM "Retire"		ID menuitem_retire		"R"
+		MENUITEM SEPARATOR
+		MENUITEM "Settings"		ID menuitem_settings	"S"
+		MENUITEM "Keys"			ID menuitem_keys		"K"
+		MENUITEM "High Scores"	ID menuitem_scores		"H"
+		MENUITEM "About"		ID menuitem_about		"A"
+		MENUITEM SEPARATOR
+		MENUITEM "Quit Game"	ID menuitem_quit		"Q"
+	END
+END
+
+
+#include "alerts.rcp"
+
+#include "gfx.rcp"
+
+#include "waves.rcp"
+
+#include "info.rcp"
+
+#include "sounds.rcp"
+
+#include "help.rcp"

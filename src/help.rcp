@@ -1,0 +1,81 @@
+STRING ID string_hs
+"The \"Code\" button generates a unique 8-digit code corresponding "\
+"to your #1 high score on the selected difficulty level, as well as "\
+"your HotSync ID.\n\nUsing "\
+"the code, you can enter your name into the online high score table "\
+"at www.mobilegamelab.com."
+
+
+STRING ID string_prset
+"================\n"\
+"Program Settings\n"\
+"================\n\n"\
+"Sound Volume - Affects the volume of sounds played by the game.  "\
+"This will override the system preferences unless set to "\
+"\"System Setting\".\n\n"\
+
+"Pen Control - Determines how the game responds to pen taps in the "\
+"display area (but not the Graffiti area).\n\n"\
+
+"Confirm Retire - If checked, causes the game to ask before "\
+"abandoning a game in progress.\n\n"\
+
+"Quick Restarts - If checked, causes \"Try Again\" to be automatically "\
+"selected after you die.\n\n"\
+
+"Graffiti Control - Allows pen taps in the Graffiti area to control "\
+"player movement when checked.  This is not affected by the Pen "\
+"Control setting.  On some devices, it is possible that the "\
+"Graffiti area might be detected incorrectly.\n\n"\
+
+"Compatibility Mode - If checked, alters some of the game's display "\
+"code, such that it is more likely to function on all devices. "\
+"Otherwise, faster assembly routines are used.  "\
+"On most newer devices, this option is automatically turned on "\
+"and will not be displayed."
+
+
+STRING ID string_gaset
+"=============\n"\
+"Game Settings\n"\
+"=============\n"\
+"Difficulty - Controls the speed of the aliens as well as how "\
+"often they fire at you.  On Easy mode, trade-in values at the "\
+"shop are increased to 100%.  Nightmare difficulty doubles the "\
+"damage of enemy fire and generates already-damaged barriers.  "\
+"High scores and starting arsenal are stored separately for "\
+"each difficulty setting.  "\
+"Changing the difficulty does not affect games in progress.\n\n"\
+
+"Start Wave - Determines on which wave new games will begin.  Only "\
+"waves that have been previously reached are available.  When "\
+"starting new games beyond the first wave, Interlopers will "\
+"automatically select the best weapon and equipment item that "\
+"were previously used on the starting wave."
+
+
+STRING ID string_keys
+"A note on \"Allow Key Events\" - If checked, this allows "\
+"the OS to generate events when hard keys used by the game are "\
+"pressed.  This can cause conflicts with 3rd party software, but "\
+"is needed for some devices to function correctly (e.g. the "\
+"Treo 600's power button)."
+
+
+/*******************************************************************
+Didn't feel like putting this anywhere...
+
+STRING ID srting_overview
+"Interlopers is inspired by the classic Space Invaders, but "\
+"expands upon that game greatly. The objective is to prevent "\
+"slowly descending waves of aliens from reaching the bottom of "\
+"the screen (by shooting them of course - how else would you "\
+"do it?). You have barriers to shield you from the aliens' fire, "\
+"but then hiding will also give them more time to advance "\
+"downwards.\n\n"\
+
+"The aliens will occasionally drop money when shot, which can "\
+"be spent on weapon upgrades and special equipment in the "\
+"between-level shop. Of course, the aliens counter this with "\
+"improvements of their own in later waves..."
+*******************************************************************/
