@@ -15,6 +15,10 @@ be spent on weapon upgrades and special equipment in the
 between-level shop. Of course, the aliens counter this with
 improvements of their own in later waves...
 
+## Free Software
+The Prison is free software as described by the GNU General Public
+License (v3). See LICENSE.md for details.
+
 ## System Requirements
 Interlopers comes in 3 versions:
 
@@ -29,14 +33,12 @@ All require OS 3.5+
 ## Features
 
 ### Power Ups
-
 When destroyed, the aliens will either drop money or one of
 two power-ups. One recharges your shield (displayed at the
 top-right of the screen) and the other provides energy for
 your special equipment (top-left).
 
 ### Start On Any Wave
-
 Interlopers allows you to start on any previously reached
 wave (see the settings screen). However, on later waves,
 the starting weapon would be of little use against the stronger
@@ -49,7 +51,6 @@ used in previous games. This shows up as a penalty in the
 final score.
 
 ### Special Equipment
-
 In addition to your main weapon, you have access to a variety
 of other useful items via the shop. For example, you start
 with a teleporter that sends you to a random location - useful
@@ -87,7 +88,6 @@ Treo 600's power button).
 ## Game Settings
 
 ### Difficulty 
-
 Diffculty controls the speed of the aliens as well as how
 often they fire at you. On Easy mode, trade-in values at the
 shop are increased to 100%. Nightmare difficulty doubles the
@@ -98,16 +98,13 @@ each difficulty setting.
 Changing the difficulty does not affect games in progress.
 
 ### Start Wave 
-
 Start Wave determines on which wave new games will begin. Only
 waves that have been previously reached are available. When
 starting new games beyond the first wave, Interlopers will
 automatically select the best weapon and equipment item that
 were previously used on the starting wave.
 
-
 ## Program Settings
-
 Setting | Description
 ------- | -----------
 Sound Volume | Affects the volume of sounds played by the game. This will override the system preferences unless set to "System Setting".
