@@ -73,6 +73,9 @@ void getprefs(void)
 	}
 
 	prefs.checksum = getprefschecksum();
+
+	// The game is now free! Everyone gets a registration code!
+	prefs.regcode = 12345;
 }
 
 
@@ -274,6 +277,8 @@ Boolean checkregcode(UInt16 testcode)
 //DbgMessage(hotsyncid);
 	}
 
+	// The game is now free! All codes are accepted!
+	accept = true;
 	return accept;
 }
 
