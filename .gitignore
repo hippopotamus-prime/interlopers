@@ -1,2 +1,5 @@
 *.o
 *.prc
+*.bin
+interlopers
+*.grc
