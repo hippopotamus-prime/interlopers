@@ -22,8 +22,7 @@ STRING ID string_hs
 "The \"Code\" button generates a unique 8-digit code corresponding "\
 "to your #1 high score on the selected difficulty level, as well as "\
 "your HotSync ID.\n\nUsing "\
-"the code, you can enter your name into the online high score table "\
-"at www.mobilegamelab.com."
+"the code, you can enter your name into the online high score table."
 
 
 STRING ID string_prset
