@@ -30,44 +30,68 @@ ifdef options
 	pilrcopts += -D $(options)
 endif
 
-gray: prcname = interlopers_gray16
-gray: prc clean
-	ls -l *.prc
+ifdef DEBUG
+	ccopts += -g
+endif
 
-gray4: ccopts += -DGRAY4
-gray4: pilrcopts += -D GRAY4
-gray4: prcname = interlopers_gray4
-gray4: prc clean
-	ls -l *.prc
+.PHONY: all gray gray4 color clean veryclean bin_gray4 bin_gray16 bin_color grc_gray4 grc_gray16 grc_color
+.SECONDARY: obj.gray4 obj.gray16 obj.color
 
-color: ccopts += -DCOLOR
-color: pilrcopts += -D COLOR
-color: prcname = interlopers_color
-color: prc clean
-	ls -l *.prc
+all: gray gray4 color
 
-debug: ccopts += -g
-debug: veryclean prc clean
-	ls -l *.prc
+gray: interlopers_gray16.prc
+	ls -l $<
+
+gray4: interlopers_gray4.prc
+	ls -l $<
+
+color: interlopers_color.prc
+	ls -l $<
 
 clean:
-	rm -f *.bin *.grc $(grcname)
-
-cleaner:
-	rm -f *.bin *.grc $(grcname) gfx.o title.o
+	rm -rf bin.* grc.*
 
 veryclean:
-	rm -f *.bin *.grc $(grcname) *.o
+	rm -rf bin.* grc.* obj.* *.prc
 
-prc: grc bin
-	build-prc $(prcname).prc "$(internalname)" $(creatorID) *.bin *.grc $(buildopts)
+interlopers_%.prc: bin_% grc_%
+	build-prc $@ "$(internalname)" $(creatorID) bin.$*/*.bin grc.$*/*.grc $(buildopts)
 
-bin: src/*.rcp src/rc.h
-	cd src && pilrc $(pilrcopts) rc.rcp ..
+bin_gray4: src/*.rcp src/rc.h | bin.gray4
+	cd src && pilrc -D GRAY4 rc.rcp ../bin.gray4
 
-grc: $(ofiles)
-	m68k-palmos-gcc $(ccopts) -o $(grcname) $(ofiles)
-	m68k-palmos-obj-res $(grcname)
+bin_gray16: src/*.rcp src/rc.h | bin.gray16
+	cd src && pilrc rc.rcp ../bin.gray16
 
-%.o: src/%.c src/*.h
-	m68k-palmos-gcc $(ccopts) -c $<
+bin_color: src/*.rcp src/rc.h | bin.color
+	cd src && pilrc -D COLOR rc.rcp ../bin.color
+
+grc_gray4: $(patsubst %.o,obj.gray4/%.o,$(ofiles)) | grc.gray4
+	m68k-palmos-gcc $(ccopts) -DGRAY4 -o grc.gray4/$(grcname) $^
+	cd grc.gray4 && m68k-palmos-obj-res $(grcname)
+
+grc_gray16: $(patsubst %.o,obj.gray16/%.o,$(ofiles)) | grc.gray16
+	m68k-palmos-gcc $(ccopts) -o grc.gray16/$(grcname) $^
+	cd grc.gray16 && m68k-palmos-obj-res $(grcname)
+
+grc_color: $(patsubst %.o,obj.color/%.o,$(ofiles)) | grc.color
+	m68k-palmos-gcc $(ccopts) -DCOLOR -o grc.color/$(grcname) $^
+	cd grc.color && m68k-palmos-obj-res $(grcname)
+
+obj.gray4/%.o: src/%.c src/*.h | obj.gray4
+	m68k-palmos-gcc $(ccopts) -DGRAY4 -c -o $@ $<
+
+obj.gray16/%.o: src/%.c src/*.h | obj.gray16
+	m68k-palmos-gcc $(ccopts) -c -o $@ $<
+
+obj.color/%.o: src/%.c src/*.h | obj.color
+	m68k-palmos-gcc $(ccopts) -DCOLOR -c -o $@ $<
+
+bin.%:
+	mkdir -p $@
+
+grc.%:
+	mkdir -p $@
+
+obj.%:
+	mkdir -p $@
