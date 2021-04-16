@@ -62,30 +62,12 @@ veryclean:
 prc: grc bin
 	build-prc $(prcname).prc "$(internalname)" $(creatorID) *.bin *.grc $(buildopts)
 
-bin: rc.rcp rc.h
-	pilrc $(pilrcopts) rc.rcp
+bin: src/*.rcp src/rc.h
+	cd src && pilrc $(pilrcopts) rc.rcp ..
 
 grc: $(ofiles)
 	m68k-palmos-gcc $(ccopts) -o $(grcname) $(ofiles)
 	m68k-palmos-obj-res $(grcname)
 
-palm.o: palm.c *.h
-	m68k-palmos-gcc $(ccopts) -c palm.c
-
-handlers.o: handlers.c *.h
-	m68k-palmos-gcc $(ccopts) -c handlers.c
-
-game.o: game.c *.h
-	m68k-palmos-gcc $(ccopts) -c game.c
-
-gfx.o: gfx.c *.h
-	m68k-palmos-gcc $(ccopts) -c gfx.c
-
-prefs.o: prefs.c *.h
-	m68k-palmos-gcc $(ccopts) -c prefs.c
-
-sound.o: sound.c *.h
-	m68k-palmos-gcc $(ccopts) -c sound.c
-
-title.o: title.c *.h
-	m68k-palmos-gcc $(ccopts) -c title.c
+%.o: src/%.c src/*.h
+	m68k-palmos-gcc $(ccopts) -c $<
