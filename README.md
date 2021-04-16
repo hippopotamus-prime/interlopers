@@ -1,5 +1,5 @@
 # Interlopers
-> Space Invaders inspired game for PalmOS
+> An open source game for PalmOS inspired by Space Invaders
 
 ## Overview
 Interlopers is inspired by the classic Space Invaders, but
@@ -16,8 +16,12 @@ between-level shop. Of course, the aliens counter this with
 improvements of their own in later waves...
 
 ## Free Software
-The Prison is free software as described by the GNU General Public
+Interlopers is free software as described by the GNU General Public
 License (v3). See LICENSE.md for details.
+
+The game was originally released as shareware on mobilegamelab.com.
+The open source version has had the registration check disabled so
+everyone can enjoy the full game.
 
 ## System Requirements
 Interlopers comes in 3 versions:
