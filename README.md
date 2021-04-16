@@ -1,6 +1,12 @@
 # Interlopers
 > An open source game for PalmOS inspired by Space Invaders
 
+![Screenshot 1](https://i.imgur.com/nDp3pIV.gif)
+![Screenshot 2](https://i.imgur.com/tjGHm72.gif)
+![Screenshot 3](https://i.imgur.com/EZLu4FV.gif)
+![Screenshot 4](https://i.imgur.com/LxpXnEm.gif)
+![Screenshot 5](https://i.imgur.com/3H972G5.gif)
+
 ## Overview
 Interlopers is inspired by the classic Space Invaders, but
 expands upon that game greatly. The objective is to prevent
