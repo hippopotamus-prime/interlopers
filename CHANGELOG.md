@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.2 - 2021-04-16
+
+* Project uploaded to GitHub, licensed under GPL v3
+* References to mobilegamelab.com have been removed
+* The registration check has been disabled - enjoy all 50 waves!
+
 ## 1.2.1 - 2004-12-27
 
 * The game is more tolerant of changes to the system palette
